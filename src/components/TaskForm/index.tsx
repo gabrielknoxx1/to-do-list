@@ -3,6 +3,7 @@ import { Container } from "./styles";
 import { useTaskListStore } from "../../services/stores/useTaskListStore";
 import { v4 as uuid } from "uuid";
 import { useEffect } from "react";
+import Logo from "../../assets/Logo.svg";
 
 type Inputs = {
   name: string;
@@ -53,6 +54,7 @@ export const TaskForm = () => {
   return (
     <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <img src={Logo} alt="Logo" />
         <input
           {...register("name")}
           placeholder="Informe um titulo para tarefa"
@@ -62,7 +64,7 @@ export const TaskForm = () => {
           {...register("description", { required: true })}
           placeholder="Descreva sua tarefa"
         />
-        {errors.description && <span>This field is required</span>}
+        {errors.description && <span>Campo obrigatório</span>}
         <button type="submit">Salvar Tarefa</button>
       </form>
     </Container>

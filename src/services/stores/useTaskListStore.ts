@@ -82,7 +82,7 @@ export const useTaskListStore = create<ITaskList>((set, get) => ({
     });
   },
   selectTask: (task) =>
-    set((state) => ({
+    set(() => ({
       selectedTask: task,
     })),
   updateList: (list: TaskListProps[]) => set(() => ({ tasklist: list })),

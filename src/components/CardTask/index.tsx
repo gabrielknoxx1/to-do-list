@@ -38,7 +38,7 @@ export const CardTask = ({ description, id, status, title }: TaskListProps) => {
       </header>
       <section>
         <strong>{title}</strong>
-        <p>{description}</p>
+        <p title={description}>{description}</p>
       </section>
     </Container>
   );
