@@ -19,6 +19,9 @@ export const Board = () => {
         {tasklistState.map((task) => (
           <CardTask key={task.id} {...task} />
         ))}
+        {tasklistState?.length === 0 && (
+          <strong>Sem Tarefas cadastradas</strong>
+        )}
       </Content>
     </Container>
   );

@@ -13,4 +13,8 @@ export const Content = styled.div`
   border-radius: 0.5rem;
   padding: 1rem;
   overflow-x: hidden;
+
+  > strong {
+    color: ${({ theme }) => theme["gray-200"]};
+  }
 `;
