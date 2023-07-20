@@ -1,28 +1,10 @@
 {
   "tasks": [
     {
-      "description": "typicode hadouken",
-      "title": "json-server",
+      "description": "Crie uma aplicação simples de lista de tarefas (to-do list) usando React.js. A aplicação deve permitir ao usuário adicionar, excluir e marcar tarefas como concluídas.\n\nA aplicação deve exibir uma lista de tarefas com as seguintes informações: nome da tarefa,  descrição da tarefa e status (concluída ou pendente).",
+      "title": "Concluir o teste técnico",
       "id": "1",
-      "status": "pending"
-    },
-    {
-      "description": "asdasdasd",
-      "title": "asd",
-      "id": "adsdas",
-      "status": "pending"
-    },
-    {
-      "description": "coxinha",
-      "title": "batata",
-      "id": "dcdd81a2-d1ea-4989-9d5a-8e111223b0d8",
-      "status": "pending"
-    },
-    {
-      "description": "coxinha empada",
-      "title": "batata",
-      "id": "f6b7d5da-3a01-46cf-8a1e-c628b5fb76d2",
-      "status": "pending"
+      "status": "done"
     }
   ]
 }
