@@ -1,0 +1,30 @@
+{
+  "name": "to-do-list",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.2",
+    "styled-components": "^6.0.4",
+    "uuid": "^9.0.0",
+    "zustand": "^4.3.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.2",
+    "@vitejs/plugin-react": "^4.0.1",
+    "typescript": "*",
+    "vite": "^4.4.0"
+  }
+}
