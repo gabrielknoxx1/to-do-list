@@ -20,6 +20,16 @@ export const Container = styled.div<{ status: "pending" | "done" }>`
     align-items: center;
     justify-content: flex-end;
     gap: 0.5rem;
+
+    > span {
+      background-color: ${({ theme, status }) =>
+        status === "pending" ? theme["red-500"] : theme["green-300"]};
+
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: ${({ theme }) => theme.white};
+    }
   }
 
   > section {

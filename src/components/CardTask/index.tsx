@@ -10,9 +10,12 @@ export const CardTask = ({ description, id, status, title }: TaskListProps) => {
     (state) => state
   );
 
+  const statusMessage = status === "done" ? "Concluido" : "Pendente";
+
   return (
     <Container status={status}>
       <header>
+        <span>{statusMessage}</span>
         <ButtonIcon
           variant="status"
           title="Concluir"
