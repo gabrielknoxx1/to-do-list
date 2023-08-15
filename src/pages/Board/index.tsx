@@ -2,12 +2,21 @@ import { useEffect } from "react";
 import { CardTask } from "../../components/CardTask";
 import { TaskForm } from "../../components/TaskForm";
 import { useApi } from "../../services/api";
-import { useGetTodosQuery } from "../../services/api/@generated/schemas";
+import {
+  useAddTaskMutation,
+  useGetTodosQuery,
+} from "../../services/api/@generated/schemas";
 import {
   TaskListProps,
   useTaskListStore,
 } from "../../services/stores/useTaskListStore";
 import { Container, Content } from "./styles";
+
+const randomLorenData = {
+  completed: false,
+  title: "Lorem ipsum dolor",
+  description: "Lorem ",
+};
 
 export const Board = () => {
   const [tasklistState, updateList] = useTaskListStore(
@@ -15,6 +24,9 @@ export const Board = () => {
   );
   const { getTasks } = useApi();
   const { data, error, loading } = useGetTodosQuery();
+  const [handleAddLorenTask, addTaskResponse] = useAddTaskMutation({
+    variables: { data: randomLorenData },
+  });
 
   const moreTask = data?.todos?.map((content) => {
     return {
@@ -31,10 +43,14 @@ export const Board = () => {
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
+
+  // ! Concluir o exemplo com Mutation
+  // TODO: ajustar GQL de entrado para mutation
   return (
     <Container>
       <TaskForm />
       <Content>
+        <button onClick={() => handleAddLorenTask()}>Add Loren content</button>
         {tasklistState?.map((task) => (
           <CardTask key={task.id} {...task} />
         ))}

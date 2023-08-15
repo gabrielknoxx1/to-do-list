@@ -1,0 +1,11 @@
+mutation addTask {
+  createTodo(
+    data: {
+      completed: false
+      title: "Fazer compras"
+      description: "ir ao mercado hoje"
+    }
+  ) {
+    id
+  }
+}

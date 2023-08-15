@@ -3509,12 +3509,51 @@ export enum _SystemDateTimeFieldVariation {
   Localization = 'localization'
 }
 
+export type AddTaskMutationVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AddTaskMutation = { __typename?: 'Mutation', createTodo?: { __typename?: 'Todo', id: string } | null };
+
 export type GetTodosQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetTodosQuery = { __typename?: 'Query', todos: Array<{ __typename?: 'Todo', id: string, description: string, title?: string | null, completed?: boolean | null }> };
 
 
+export const AddTaskDocument = gql`
+    mutation addTask {
+  createTodo(
+    data: {completed: false, title: "Fazer compras", description: "ir ao mercado hoje"}
+  ) {
+    id
+  }
+}
+    `;
+export type AddTaskMutationFn = Apollo.MutationFunction<AddTaskMutation, AddTaskMutationVariables>;
+
+/**
+ * __useAddTaskMutation__
+ *
+ * To run a mutation, you first call `useAddTaskMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddTaskMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addTaskMutation, { data, loading, error }] = useAddTaskMutation({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useAddTaskMutation(baseOptions?: Apollo.MutationHookOptions<AddTaskMutation, AddTaskMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddTaskMutation, AddTaskMutationVariables>(AddTaskDocument, options);
+      }
+export type AddTaskMutationHookResult = ReturnType<typeof useAddTaskMutation>;
+export type AddTaskMutationResult = Apollo.MutationResult<AddTaskMutation>;
+export type AddTaskMutationOptions = Apollo.BaseMutationOptions<AddTaskMutation, AddTaskMutationVariables>;
 export const GetTodosDocument = gql`
     query getTodos {
   todos {
