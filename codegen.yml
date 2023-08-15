@@ -1,0 +1,8 @@
+overwrite: true
+schema: "https://api-sa-east-1.hygraph.com/v2/cllaymvfk23fc01uj2241608d/master"
+documents: "src/**/*.gql"
+generates:
+  src/services/api/@generated/schemas.tsx:
+    plugins: ["typescript", "typescript-operations", "typescript-react-apollo"]
+config:
+  withHooks: true
