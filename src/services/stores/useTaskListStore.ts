@@ -24,7 +24,7 @@ export const useTaskListStore = create<ITaskList>((set, get) => ({
   selectedTask: {} as TaskListProps,
   addTask: (task: TaskListProps) => {
     set((state) => ({ tasklist: [...state.tasklist, task] }));
-    fetch(baseUrl, {
+    fetch(`${baseUrl}/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

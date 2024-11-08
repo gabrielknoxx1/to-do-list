@@ -1,12 +1,13 @@
+import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Board } from "./pages/Board";
-import { defaultTheme } from "./styles/themes/default";
+import { router } from "./services/routes";
 import { GlobalStyle } from "./styles/global";
+import { defaultTheme } from "./styles/themes/default";
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Board />
+      <RouterProvider router={router} />
       <GlobalStyle />
     </ThemeProvider>
   );

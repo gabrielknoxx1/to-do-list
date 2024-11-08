@@ -1,10 +1,30 @@
 {
   "tasks": [
     {
-      "description": "Crie uma aplicação simples de lista de tarefas (to-do list) usando React.js. A aplicação deve permitir ao usuário adicionar, excluir e marcar tarefas como concluídas.\n\nA aplicação deve exibir uma lista de tarefas com as seguintes informações: nome da tarefa,  descrição da tarefa e status (concluída ou pendente).",
-      "title": "Concluir o teste técnico",
-      "id": "1",
-      "status": "done"
+      "id": "cac48df0-0636-42e7-a970-c08129f7c4ed",
+      "description": "asdasdasd",
+      "title": "asdasdasd",
+      "status": "pending"
+    },
+    {
+      "id": "2b269b30-1ac5-4882-907b-19f7b1c9d002",
+      "description": "asdasdasd",
+      "title": "Luana Oliveira Gois",
+      "status": "pending"
+    },
+    {
+      "id": "9f6b0a77-5f7c-4797-a95b-ed471100a58e",
+      "description": "aaaaaaaa",
+      "title": "asdasd",
+      "status": "pending"
+    }
+  ],
+  "users": [
+    {
+      "id": "acd2e17c-7d2e-4cbf-87de-76818eb2c96f",
+      "name": "Gabriel Sousa",
+      "email": "teste@teste.com",
+      "password": "1234"
     }
   ]
 }

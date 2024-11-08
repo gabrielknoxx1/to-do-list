@@ -1,9 +1,9 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Container } from "./styles";
-import { useTaskListStore } from "../../services/stores/useTaskListStore";
-import { v4 as uuid } from "uuid";
 import { useEffect } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { v4 as uuid } from "uuid";
 import Logo from "../../assets/Logo.svg";
+import { useTaskListStore } from "../../services/stores/useTaskListStore";
+import { Container } from "./styles";
 
 type Inputs = {
   name: string;
@@ -29,6 +29,9 @@ export const TaskForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = ({ description, name }) => {
     if (selectedTask.id?.length === 0) {
+    const selectedTaskLength = Object.keys(selectedTask).length;
+
+    if (selectedTaskLength === 0) {
       addTask({
         description,
         title: name,

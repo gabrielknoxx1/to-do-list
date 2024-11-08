@@ -1,6 +1,6 @@
 import { useTaskListStore } from "../stores/useTaskListStore";
 
-export const baseUrl = "http://localhost:3000/tasks";
+export const baseUrl = "http://localhost:3000";
 
 export const useApi = () => {
   const [updateList] = useTaskListStore(({ updateList }) => [updateList]);
